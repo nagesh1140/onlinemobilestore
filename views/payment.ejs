@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/checkout.css" />
+  </head>
+
+  <body>
+    <center>
+      <h2>Online Payment page</h2>
+      <div class="row">
+        <div class="col-25">
+          <div class="container">
+            <center>
+              <form action="/Mobiles" method="POST">
+                <script
+                  src="https://checkout.stripe.com/checkout.js"
+                  class="stripe-button"
+                  data-key="pk_test_51HYQO1AgPlpBILOrsuCSBGWgDPmP30dlRjUjoIFMuTPJPOpt0DGgTxIQALbxhsPpBcJV3Mlo96YmEQ5M78KmHyJ200YlTbd5y0"
+                  data-amount="<%= productcost*100 %>"
+                  data-currency="inr"
+                  data-name="Chakri Chinnu"
+                  data-description="Online Mobile store"
+                  data-locale="auto"
+                ></script>
+                <input
+                  type="hidden"
+                  name="firstname"
+                  value="<%= firstname %>"
+                />
+                <input type="hidden" name="email" value="<%= email %> " />
+                <input type="hidden" name="address" value="<%= address %>" />
+                <input type="hidden" name="city" value="<%= city %> " />
+                <input type="hidden" name="state" value="<%= state %>" />
+                <input type="hidden" name="zip" value="<%= zip %> " />
+                <input
+                  type="hidden"
+                  name="productname"
+                  value="<%= productname %> "
+                />
+                <input
+                  type="hidden"
+                  name="productcost"
+                  value="<%= productcost %> "
+                />
+                <input type="hidden" name="name" value="<%= name %>" />
+              </form>
+            </center>
+          </div>
+        </div>
+      </div>
+    </center>
+  </body>
+</html>

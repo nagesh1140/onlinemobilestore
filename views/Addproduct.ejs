@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Responsive Login Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./css/EcommercePage.css" />
+    <link rel="stylesheet" href="./css/admin.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+  </head>
+
+  <body>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">Online mobile Store</div>
+      </div>
+
+
+      <div class="nav-links">
+        <a href="addproduct">Add Product</a>
+        <a href="AdminPage">User Reports</a>
+        <a href="MobileReports">Mobile reports</a>
+        <a href="/Adminlogin">Logout</a>
+      </div>
+    </div>
+    <!-- partial:index.partial.html -->
+    <h1>Adding Product</h1>
+    <form action="/addproduct" method="POST">
+      <div class="row">
+        <label for="name" required>Name</label>
+        <input
+          type="text"
+          name="name"
+          autocomplete="off"
+          placeholder="enter name.."
+          required
+        />
+      </div>
+      <div class="row">
+        <label for="link" required>Imagelink</label>
+        <input
+          type="text"
+          name="imagelink"
+          autocomplete="off"
+          placeholder="image link"
+          required
+        />
+      </div>
+      <div class="row">
+        <label for="cost">cost</label>
+        <input type="number" name="cost" required />
+      </div>
+      <button type="submit">Add</button>
+    </form>
+
+    <!-- partial -->
+  </body>
+</html>

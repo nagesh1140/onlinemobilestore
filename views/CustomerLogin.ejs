@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Responsive Login Form</title>
+    <link rel="stylesheet" href="./css/login.css" />
+  </head>
+
+  <body>
+    <!-- partial:index.partial.html -->
+    <% var error,pwderror %>
+    <h1>User Login</h1>
+    <form action="/login" method="POST">
+      <% if(error) { %> <%= error %> <% } %>
+      <div class="row">
+        <label for="email" required>Email</label>
+        <input
+          type="email"
+          name="email"
+          autocomplete="off"
+          placeholder="email@example.com"
+        />
+      </div>
+      <% if(pwderror) { %> <%= pwderror %> <% } %>
+      <div class="row">
+        <label for="password">Password</label>
+        <input type="password" name="password" required />
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <a href="/Registration">New User? register now</a>
+    <!-- partial -->
+  </body>
+</html>
